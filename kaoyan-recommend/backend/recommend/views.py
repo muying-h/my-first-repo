@@ -11,6 +11,8 @@ logger = logging.getLogger('recommend')
 @api_view(['POST'])
 def recommend(request):
     profile_id = request.data.get('profile_id')
+    if not profile_id:
+        return Response({'code': 'PROFILE_REQUIRED', 'message': '缺少 profile_id'}, status=400)
     profile = get_object_or_404(StudentProfile, pk=profile_id)
 
     candidates = []

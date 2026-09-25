@@ -1,6 +1,6 @@
 <template>
   <div style="max-width:700px;margin:40px auto;">
-    <h2>推荐结果（候选清单）</h2>
+    <h2>推荐结果（候选清单 · 共 {{ candidates.length }} 条）</h2>
     <div v-if="loading">加载中...</div>
     <div v-else-if="error" style="color:red">{{ error }}</div>
     <div v-else-if="candidates.length===0">未命中，请放宽条件</div>
