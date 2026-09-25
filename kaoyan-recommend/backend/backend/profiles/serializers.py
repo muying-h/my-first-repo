@@ -1,0 +1,1 @@
+python<br>from rest_framework import serializers<br>from .models import StudentProfile<br><br>class StudentProfileSerializer(serializers.ModelSerializer):<br> rank_percent = serializers.RegexField(<br> regex=r'^(前\d+%|\d+/\d+)$',<br> error_messages={"invalid": "成绩排名格式应为'前X%'或'X/Y'"}<br> )<br> class Meta:<br> model = StudentProfile<br> fields = '__all__'<br>
