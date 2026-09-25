@@ -1,0 +1,1 @@
+<br>Django==6.1.1<br>djangorestframework==3.15.2<br>django-cors-headers==4.4.0<br>
