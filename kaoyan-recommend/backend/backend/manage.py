@@ -1,0 +1,1 @@
+python<br>#!/usr/bin/env python<br>import os<br>import sys<br><br>if __name__ == '__main__':<br> os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kaoyan.settings')<br> from django.core.management import execute_from_command_line<br> execute_from_command_line(sys.argv)<br>
